@@ -1,0 +1,257 @@
+
+  /* Шапка */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buttons button:not(.theme-toggle) {
+    background: #ff5722;
+    margin-top: 5px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  
+  .buttons button:hover:not(.theme-toggle) {
+    background: #2980b9;
+  }
+
+
+  /* Кнопка смены темы */
+
+  .theme-toggle {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    background-color: white; 
+    color: black;            
+  }
+  
+  .dark-mode.theme-toggle {
+    background-color: black; 
+    color: white;            
+  }
+  
+  
+  :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+    
+    .dark-mode {
+      --bg-color: #1d2a35;
+      --text-color: black;
+    } 
+  /* Общие элементы на сайте */
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  } 
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  } 
+   
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  }
+  .section h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #2c3e50;
+  }
+  
+
+  /* Стили ссылок */
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: blue;
+}
+a:visited {
+  color: black;
+}
+
+/* Цвета карточек */
+.yellow {
+  background-color: #fff3b0;
+}
+.red {
+  background-color: #f5b7b1;
+}
+.green {
+  background-color: #d4f5d3;
+}
+.orange {
+  background-color: #ffd9b3;
+}
+.blue {
+  background-color: #d0ebff;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+.section p {
+  margin: 10px 0;
+}
+
+
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов шириной до 1200px */
+@media screen and (max-width: 1200px) {
+  .container{
+    gap: 20px;
+  }
+
+  .section {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .bg-white {
+    width: 60%;
+  }
+}
+
+/* Для экранов шириной до 768px */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 18px; /* Уменьшаем размер шрифта */
+  }
+
+  .bg-white {
+    width: 80%;
+  }
+
+  .container{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .section{
+    flex: 1 1 80%;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .buttons a {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Для экранов шириной до 480px */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px; /* Еще больше уменьшаем размер шрифта */
+  }
+
+  .bg-white {
+    width: 90%;
+    margin: 50px auto 10px;
+  }
+
+  .container{
+    gap: 15px;
+  }
+
+  .section{
+    flex: 1 1 90%;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .buttons a {
+    font-size: 0.9rem;
+    margin: 8px 0;
+  }
+}
+
+
+
+/* всякие классные фишки */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.buttons a.active button {
+  background: #4CAF50;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}

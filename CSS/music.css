@@ -1,0 +1,96 @@
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 380px;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Можно для красоты скруглить углы */
+}
+
+
+
+/* Белая карточка с названием группы */
+.bg-white.group-name-card {
+  background-color: #ecf0f1;
+  width: 50%;
+  max-width: 600px;
+  margin: 100px auto 20px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .bg-white.group-name-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .bg-white.group-name-card h1 {
+    color: #000;
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  /* Цвета карточек */
+  .blue {
+    background-color: #d0ebff;
+  }
+  .red {
+    background-color: #f5b7b1;
+  }
+  .green {
+    background-color: #d4f5d3;
+  }
+  
+  /* Иконки музыкальных сервисов */
+.music-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; 
+  margin: 20px 0;
+}
+
+.music-icons a img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.music-icons a img:hover {
+  transform: scale(1.1);
+}
+
+.album-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.album-item img {
+  width: 50px; 
+  height: auto;
+  border-radius: 8px; 
+}
+
+.dark-mode .theme-toggle {
+  background-color: black;
+  color: white;
+}
